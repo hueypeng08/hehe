@@ -31,7 +31,7 @@ if st.button("Upload to GitHub"):
     csv = df.to_csv(index = False)
     content = base64.b64encode(csv.encode()).decode()
 
-url = "https://api.github.com/repos/hueypeng08/hehe/contents/data.csv"
+url = "https://api.github.com/repos/hueypeng08/hehe/contents/scripts/data.csv"
 headers = {"Authorization": f"token {st.secrets['github']['token']}"}
 
 payload = {
