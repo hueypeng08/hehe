@@ -36,11 +36,11 @@ headers = {"Authorization": f"token {st.secrets['github']['token']}"}
 
 payload = {
     "message": "Add data.csv",
-    "contents": content,
+    "content": content,
     "branch": "main"
 }
 
-r = request.put(url, headers=headers, json=payload)
+r = requests.put(url, headers=headers, json=payload)
 if r.status_code in [200,201]:
     st.success("data uploaded!")
 else:
